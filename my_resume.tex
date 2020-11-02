@@ -67,8 +67,9 @@
 %----------HEADING-----------------
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://linkedin.com/in/samuelgonsalves/}{\Large Samuel Gonsalves}} & Email : \href{mailto:sgonsal@ncsu.edu}{sgonsal@ncsu.edu}\\
-  \href{http://linkedin.com/in/samuelgonsalves/}{http://linkedin.com/in/samuelgonsalves} & Phone : {+1 984-444-0446}\\
+  \textbf{\href{https://samuelgonsalves.com}{\Large Samuel Gonsalves}} & Email : \href{mailto:sgonsal@ncsu.edu}{sgonsal@ncsu.edu}\\
+  \href{https://samuelgonsalves.com}{https://samuelgonsalves.com} & Phone : {+1 984-444-0446}\\
+  \href{https://linkedin.com/in/samuelgonsalves}{https://linkedin.com/in/samuelgonsalves}} & \href{https://github.com/samuelgonsalves/}{GitHub: samuelgonsalves}\\
 \end{tabular*}
 
 %-----------EXPERIENCE-----------------
@@ -77,21 +78,21 @@
   \resumeSubHeadingListStart
   \resumeSubheading
       {Inmar }{Winston-Salem, NC}
-      {Graduate Software Engineer}{Jun. 2018 - Present}
+      {Software Engineer}{Jun. 2018 - Present}
     \resumeItemListStart
+    \resumeItem{Sorter services}
+          {Created file processing Windows services, using RabbitMQ pub-sub messaging to interact with a warehouse Sorter. Implemented shipping capabilities with UPS carrier Parcel and Freight using NRules rule engine. Setup monitoring and alerts for services in Azure App Insights.}
         \resumeItem{Project Xenon}
-          {Developed features against a tight schedule ensuring the smooth acquisition of Genco. Took ownership of a major piece of automation functionality, saving the company \$1.5M in warehouse leasing fees.}
+          {Developed features for ASP .NET web app against a tight schedule ensuring the smooth acquisition of Genco, saving the company \$1.5M in warehouse leasing fees. Took ownership of a major piece of ETL process. }
         \resumeItem{Returns Management}
-          {Responsible for coding user stories for the invoicing subsystem, writing Azure-hosted services, enabling significant performance improvements resulting in onboarding retail clients.}
-        \resumeItem{Support duties}
-          {Dealt with clients and various stakeholders that faced issues while using the RMA application, researching application issues, diagnosing and fixing them. }
-       \resumeItemListEnd
+          {Responsible for coding user stories for the invoicing subsystem, writing .NET cloud-hosted services, enabling significant performance improvements resulting in onboarding retail clients.}
+      \resumeItemListEnd
 \resumeSubheading
       {Inmar }{Winston-Salem, NC}
       {Software Engineering Intern}{May 2017 - May 2018}
       \resumeItemListStart
         \resumeItem{Azure Blob Migration and Restructuring}
-          {Proposed and implemented solutions for migrating about 2 million Azure blob files across containers and storage accounts.}
+          {Proposed and implemented a fault-tolerant console app using Azure function chaining to migrate 2 million Azure blob files across containers and storage accounts.}
         \resumeItem{Supply Chain IoT solution}
           {Developed an IoT solution for a scanning warehouse to completely automate the signaling and monitoring of workstations. Responsible for writing a UWP monitoring app for a Raspberry Pi, using the Azure IoT hub to relay messages through triggered Azure Functions.}
       \resumeItemListEnd
@@ -113,16 +114,18 @@
 
 \section{Projects}
   \resumeSubHeadingListStart
+  	\resumeSubItem{Alexa Trello Grocery Skill}
+      {Created an Alexa custom skill in C\#, utilizing an AWS Lambda to interact with Trello to add multi-value grocery items, mark shopping as done \& set reminders.}
+    \resumeSubItem{Reflections}
+      {Currently writing an API using Node.js, Express \& MongoDB for a Vue app to track daily journal reflections.}
     \resumeSubItem{Game Engine}
       {Designed and implemented a game engine in Java and the Processing framework. It included: an asynchronous multithreaded architecture, a game object model, an event management system and a scripting engine. Used the engine to design 3 games.}
+      \resumeSubItem{Date Recommender}
+      {A Vue web app to recommend \& plan date ideas from Yelp, a Trello board taking the weather and distance into account.}
     \resumeSubItem{Expertiza Survey Functionality}
       {Introduced the survey functionality in the Expertiza web app that allowed instructors to administer surveys for students. Responsible for developing the survey creation, deployment and stats generation features.}
     \resumeSubItem{Bank App}
       {Developed an MVC web app in Rails emulating the functionality of an online banking system.}
-    \resumeSubItem{Wikipedia Viewer}
-      {Designed the front end of a web page connecting with the WikiMedia API to display top 10 results from Wikipedia based on a search query.}
-    \resumeSubItem{LexisNexis mobile law UX}
-      {Designed a low fidelity and a high fidelity prototype using Balsamiq and Invision for defendants going to traffic court.}
       \resumeSubItem{AI search algorithms}
       {Implemented search algorithms such as BFS, DFS, A*, Greedy Search, UCS in Java on a map of cities and compared the results produced.}
   \resumeSubHeadingListEnd
@@ -131,22 +134,12 @@
 
 \section{Programming Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Languages}{C\#, Java}
-    \resumeSubItem{Web Dev}{Javascript, TypeScript, jQuery, HTML5, CSS3}
-    \resumeSubItem{Database}{SQL Server, T-SQL, SSIS, SSRS}    
-    \resumeSubItem{Technologies / Frameworks}{.NET Core, ASP .NET, Entity Framework, Azure services (Serverless Compute, Storage), ServiceBus, WCF, WPF, UWP}
-  \resumeSubHeadingListEnd
-
-%---------EXTRACURRICULARS-------------
-
-\section{Achievements / Extracurriculars}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Inmar Intern Mentor}
-      {Mentored an Inmar intern, assisting with career-related questions and with the final leadership presentation.}
-    \resumeSubItem{Volunteer}
-      {Member of the volunteering organization ISSERV at NCSU.}
-    \resumeSubItem{Wikipedia article contribution}
-      {Enhanced the 'Jasmine (JavaScript testing framework)' Wikipedia article by researching, adding relevant and up to date content.}
+    \resumeSubItem{Languages}{C\#}
+    \resumeSubItem{Web Dev}{Javascript, TypeScript, Vue, Node.js, jQuery, HTML5, CSS3}
+    \resumeSubItem{Database}{SQL Server, T-SQL, MongoDB}    
+    \resumeSubItem{Azure}{Functions, Application Insights, Storage, Cognitive Services}
+    \resumeSubItem{AWS}{Lambdas}
+    \resumeSubItem{Technologies / Frameworks}{ASP .NET, Entity Framework, ServiceBus, WCF}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
