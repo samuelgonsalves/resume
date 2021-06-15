@@ -1,3 +1,9 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -7,8 +13,11 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -17,8 +26,8 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
@@ -34,6 +43,9 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
@@ -42,11 +54,25 @@
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -62,44 +88,51 @@
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \begin{document}
 
 %----------HEADING-----------------
-
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://samuelgonsalves.com}{\Large Samuel Gonsalves}} & Email : \href{mailto:sgonsal@ncsu.edu}{sgonsal@ncsu.edu}\\
-  \href{https://samuelgonsalves.com}{https://samuelgonsalves.com} & Phone : {+1 984-444-0446}\\
-  \href{https://linkedin.com/in/samuelgonsalves}{https://linkedin.com/in/samuelgonsalves}} & \href{https://github.com/samuelgonsalves/}{GitHub: samuelgonsalves}\\
+  \textbf{\href{https://samuelgonsalves.com}{\LARGE Samuel David Gonsalves}} & Email : \href{mailto:sgonsal@ncsu.edu}{sgonsal@ncsu.edu}\\
+  \href{https://samuelgonsalves.com/}{https://samuelgonsalves.com/} & Mobile : +1-984-444-0446 \\
 \end{tabular*}
 
 %-----------EXPERIENCE-----------------
-
 \section{Experience}
   \resumeSubHeadingListStart
-  \resumeSubheading
-      {Inmar }{Winston-Salem, NC}
+
+    \resumeSubheading
+      {Inmar Intelligence}{Winston-Salem, NC}
       {Software Engineer}{Jun. 2018 - Present}
-    \resumeItemListStart
-    \resumeItem{Sorter services}
-          {Created file processing Windows services, using RabbitMQ pub-sub messaging to interact with a warehouse Sorter. Implemented shipping capabilities with UPS carrier Parcel and Freight using NRules rule engine. Setup monitoring and alerts for services in Azure App Insights.}
-        \resumeItem{Project Xenon}
-          {Developed features for ASP .NET web app against a tight schedule ensuring the smooth acquisition of Genco, saving the company \$1.5M in warehouse leasing fees. Took ownership of a major piece of ETL process. }
-        \resumeItem{Returns Management}
-          {Responsible for coding user stories for the invoicing subsystem, writing .NET cloud-hosted services, enabling significant performance improvements resulting in onboarding retail clients.}
+      \resumeItemListStart
+        \resumeItem{Receiving Services}
+          {Created multiple .NET API endpoints and microservices used to streamline the Receiving platform.}
+        \resumeItem{Shipping Rules Engine}
+          {Designed and implemented .NET services to support weight-based shipping classification using NRules rule engine.}
+        \resumeItem{Monitoring}
+          {Wrote reusable custom event extensions in C\# to log events to Azure Application Insights. Created Kusto log  alerts and dashboards to monitor and notify on failures.}
+        \resumeItem{Sorter Middleware}
+          {Created scalable, distributed file processing services leveraging .NET Core, RabbitMQ.}  
+        \resumeItem{Cert Authentication Automation}
+          {Automated setup of on premise servers with X509 machine certificate-based authentication with Azure Key Vault using PowerShell.}
+        \resumeItem{Coverage \& Testing}
+          {Improved unit test code coverage by coding generic C\# libraries, test helpers. Cut build time by 25\% by refactoring unit tests using SOLID. Developed generic API client simplifying integration testing.}
+        \resumeItem{Returns Management Web App}
+          {Enhanced user experience \& performance of ASP .NET web application with features like type-ahead functionality, accessibility.}
       \resumeItemListEnd
-\resumeSubheading
-      {Inmar }{Winston-Salem, NC}
+    \resumeSubheading
+      {Inmar Intelligence}{Winston-Salem, NC}
       {Software Engineering Intern}{May 2017 - May 2018}
       \resumeItemListStart
-        \resumeItem{Azure Blob Migration and Restructuring}
-          {Proposed and implemented a fault-tolerant console app using Azure function chaining to migrate 2 million Azure blob files across containers and storage accounts.}
-        \resumeItem{Supply Chain IoT solution}
-          {Developed an IoT solution for a scanning warehouse to completely automate the signaling and monitoring of workstations. Responsible for writing a UWP monitoring app for a Raspberry Pi, using the Azure IoT hub to relay messages through triggered Azure Functions.}
+        \resumeItem{IoT Warehouse Management app}
+          {Developed and implemented a UWP .NET app for Raspberry Pi to  handle \& aggregate notification events from scanning stations using Azure Functions, Azure IoT hub.}
+        \resumeItem{Blob Migration}
+          {Designed and built a custom, highly scalable and fault tolerant Azure blob file migration utility to migrate 2M files across storage containers and accounts. Successfully deployed the utility using Azure functions and a .NET console app. }
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%-----------EDUCATION-----------------
 
+%-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
@@ -109,38 +142,37 @@
       {Savitribai Phule Pune University}{Pune, India}
       {Bachelor of Computer Engineering}{Aug. 2012 -- Jun. 2016}
   \resumeSubHeadingListEnd
-  
-%-----------PROJECTS-----------------
 
+
+%-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-  	\resumeSubItem{Alexa Trello Grocery Skill}
-      {Created an Alexa custom skill in C\#, utilizing an AWS Lambda to interact with Trello to add multi-value grocery items, mark shopping as done \& set reminders.}
-    \resumeSubItem{Reflections}
-      {Currently writing an API using Node.js, Express \& MongoDB for a Vue app to track daily journal reflections.}
+    \resumeSubItem{Alexa Skill}
+      {Implemented an Alexa Skill using AWS Lambda in C\# to manage my Trello Grocery Board with ability to add multiple items, set reminders, \& move items across lists. }
     \resumeSubItem{Game Engine}
-      {Designed and implemented a game engine in Java and the Processing framework. It included: an asynchronous multithreaded architecture, a game object model, an event management system and a scripting engine. Used the engine to design 3 games.}
-      \resumeSubItem{Date Recommender}
-      {A Vue web app to recommend \& plan date ideas from Yelp, a Trello board taking the weather and distance into account.}
-    \resumeSubItem{Expertiza Survey Functionality}
-      {Introduced the survey functionality in the Expertiza web app that allowed instructors to administer surveys for students. Responsible for developing the survey creation, deployment and stats generation features.}
+      {Created a game engine in Java using an asynchronous multi-threaded architecture, game object model, event management system and a scripting engine. Used the engine to design 2 games - Space Invaders and Pong.}
+    \resumeSubItem{Date Idea Recommender}
+      {A Vue app that recommends date ideas by factoring in previously saved ideas on Trello, restaurants near you using Yelp API, current weather conditions and distance using MapQuest API.}
+    \resumeSubItem{Continuous Integration Slack Bot}
+      {CI Slack Bot written in Node.js that integrates with Travis CI, Coveralls, GitHub to streamline common CI tasks such as code coverage, issue creation, build failures.}
+    \resumeSubItem{Connect 4 game}
+      {Wrote a desktop multiplayer Connect 4 game in Java with TCP socket based communication between two clients.}
     \resumeSubItem{Bank App}
-      {Developed an MVC web app in Rails emulating the functionality of an online banking system.}
-      \resumeSubItem{AI search algorithms}
-      {Implemented search algorithms such as BFS, DFS, A*, Greedy Search, UCS in Java on a map of cities and compared the results produced.}
+      {A web app to emulate the features of an online bank. Built using Ruby on Rails and PostgreSQL with features for depositing, withdrawing, transferring and borrowing money.}
   \resumeSubHeadingListEnd
 
+%
 %--------PROGRAMMING SKILLS------------
-
 \section{Programming Skills}
   \resumeSubHeadingListStart
     \resumeSubItem{Languages}{C\#}
-    \resumeSubItem{Web Dev}{Javascript, TypeScript, Vue, Node.js, jQuery, HTML5, CSS3}
-    \resumeSubItem{Database}{SQL Server, T-SQL, MongoDB}    
-    \resumeSubItem{Azure}{Functions, Application Insights, Storage, Cognitive Services}
+    \resumeSubItem{Web}{JavaScript, TypeScript, Vue, Node.js, jQuery, HTML, CSS}   
+    \resumeSubItem{Azure}{Functions, Storage, Web Jobs, App Insights, Service Bus}
     \resumeSubItem{AWS}{Lambdas}
-    \resumeSubItem{Technologies / Frameworks}{ASP .NET, Entity Framework, ServiceBus, WCF}
-  \resumeSubHeadingListEnd
+    \resumeSubItem{Database}{SQL Server, MongoDB}
+    \resumeSubItem{Frameworks}{.NET, .NET Core, ASP .NET, Entity Framework}   
+\resumeSubHeadingListEnd
+
 
 %-------------------------------------------
 \end{document}
