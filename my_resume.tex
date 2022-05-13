@@ -93,7 +93,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://samuelgonsalves.com}{\LARGE Samuel David Gonsalves}} & Email : \href{mailto:sgonsal@ncsu.edu}{sgonsal@ncsu.edu}\\
+  \textbf{\href{https://samuelgonsalves.com}{\LARGE Samuel David Gonsalves}} & Email : \href{mailto: samueldgonsalves@gmail.com}{samueldgonsalves@gmail.com}\\
   \href{https://samuelgonsalves.com/}{https://samuelgonsalves.com/} & Mobile : +1-984-444-0446 \\
 \end{tabular*}
 
@@ -101,24 +101,26 @@
 \section{Experience}
   \resumeSubHeadingListStart
 
+    \resumeSubheading {Amazon}{Austin, TX}
+      {Software Development Engineer} {Oct. 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Push Notifications}
+          {Redesigned and implemented a scalable push notification system involving customer segmentation importing, marketing team notifications using AWS Lambda, SQS, CDK and Amazon Pinpoint.}
+        \resumeItem{Automation}
+          {Built a Jenkins testing pipeline that automated smoke tests and integration tests on the Android and iOS Whole Foods mobile apps, publishing Slack notifications, tracking metrics, catching errors before they became customer facing.}
+      \resumeItemListEnd
     \resumeSubheading
-      {Inmar Intelligence}{Winston-Salem, NC}
-      {Software Engineer}{Jun. 2018 - Present}
+      {Inmar Intelligence}{Austin, TX}
+      {Software Engineer}{Jun. 2018 - Oct. 2021}
       \resumeItemListStart
         \resumeItem{Receiving Services}
-          {Created multiple .NET API endpoints and microservices  to streamline, improve operational efficiency of the Receiving platform.}
+          {Created multiple .NET API endpoints and message-queue based microservices to streamline, improve operational efficiency of the Receiving platform.}
         \resumeItem{Shipping Rules Engine}
           {Designed and implemented .NET services to support weight-based shipping classification using NRules rule engine.}
         \resumeItem{Monitoring}
           {Wrote reusable custom event extensions in C\# enabling attribute-based logging to Azure Application Insights. Created Kusto log alerts and dashboards to monitor and notify on failures.}
-        \resumeItem{Sorter Middleware}
-          {Created scalable, distributed file processing services leveraging .NET Core and RabbitMQ message queueing.}  
-        \resumeItem{Cert Authentication Automation}
-          {Automated setup of on premise servers with X.509 machine certificate-based authentication with Azure Key Vault using PowerShell.}
         \resumeItem{Coverage \& Testing}
-          {Improved unit test code coverage by coding generic C\# libraries, test helpers. Cut build time by 25\% by refactoring unit tests using SOLID. Developed generic API client simplifying integration testing.}
-        \resumeItem{Returns Management Web App}
-          {Enhanced user experience \& performance of ASP .NET web application with features like type-ahead functionality, accessibility.}
+          {Improved unit test code coverage by coding generic C\# libraries, test helpers. Cut build time by 25\% by refactoring unit tests using SOLID and wrote generic API clients to simplify integration testing.}
       \resumeItemListEnd
     \resumeSubheading
       {Inmar Intelligence}{Winston-Salem, NC}
@@ -127,7 +129,7 @@
         \resumeItem{IoT Warehouse Management app}
           {Developed and implemented a UWP .NET app for Raspberry Pi to  handle \& aggregate notification events from scanning stations using Azure Functions, Azure IoT hub.}
         \resumeItem{Blob Migration}
-          {Designed and built a custom, highly scalable, fault tolerant Azure blob file migration utility to migrate 2M files across storage containers and accounts. Successfully deployed the utility using Azure functions and a .NET console app. }
+          {Designed and built a custom, scalable, and fault tolerant Azure blob file migration utility to migrate 2M files across storage containers and accounts using Azure Functions. }
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -165,10 +167,10 @@
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Languages}{C\#}
+    \resumeSubItem{Languages}{C\#, Java}
     \resumeSubItem{Web}{JavaScript, TypeScript, Vue, Node.js, jQuery, HTML, CSS}   
     \resumeSubItem{Azure}{Functions, Storage, Web Jobs, App Insights, Service Bus}
-    \resumeSubItem{AWS}{Lambdas}
+    \resumeSubItem{AWS}{Lambda, SQS, SNS, CDK, DynamoDB}
     \resumeSubItem{Database}{SQL Server, MongoDB}
     \resumeSubItem{Frameworks}{.NET, .NET Core, ASP .NET, Entity Framework}   
 \resumeSubHeadingListEnd
