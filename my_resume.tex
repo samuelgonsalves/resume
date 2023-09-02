@@ -93,21 +93,30 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://samuelgonsalves.com}{\LARGE Samuel David Gonsalves}} & Email : \href{mailto: samueldgonsalves@gmail.com}{samueldgonsalves@gmail.com}\\
-  \href{https://samuelgonsalves.com/}{https://samuelgonsalves.com/} & Mobile : +1-984-444-0446 \\
+  \textbf{\href{https://www.linkedin.com/in/samuelgonsalves/}{\LARGE Samuel David Gonsalves}} & Email : \href{mailto: samueldgonsalves@gmail.com}{samueldgonsalves@gmail.com}\\
+  \href{https://www.linkedin.com/in/samuelgonsalves}{https://www.linkedin.com/in/samuelgonsalves/} & Mobile : +1-984-444-0446 \\
 \end{tabular*}
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-
+    \resumeSubheading {HubSpot}{Austin, TX}
+    {Senior Software Engineer} {Jun. 2023 - Present}
+    \resumeItemListStart
+        \resumeItem{Content update consumers}
+              {Created Kafka consumers to process customer HBase table row updates in real time to regenerate site maps and allow for re-indexing website pages in ElasticSearch.}
+    \resumeItemListEnd
     \resumeSubheading {Amazon}{Austin, TX}
-      {Software Development Engineer} {Oct. 2021 - Present}
+      {Software Development Engineer} {Oct. 2021 - May 2023}
       \resumeItemListStart
         \resumeItem{Push Notifications}
           {Redesigned and implemented a scalable push notification system involving customer segmentation importing, marketing team notifications using AWS Lambda, SQS, CDK and Amazon Pinpoint.}
         \resumeItem{Automation}
-          {Built a Jenkins testing pipeline that automated smoke tests and integration tests on the Android and iOS Whole Foods mobile apps, publishing Slack notifications, tracking metrics, catching errors before they became customer facing.}
+          {Built a Jenkins testing pipeline to automate smoke and integration tests on the Android and iOS Whole Foods mobile apps, publishing build alerts on Slack and tracking metrics.}
+        \resumeItem{Payment technical design}
+        {Designed a solution for supporting payments using Apple Pay and Google Pay for WFM online ordering channels.}
+        \resumeItem{Mentoring and Team Leadership}
+        {Onboarded two new team members and mentored them through knowledge transfer sessions, technical design discussions, code reviews and operational excellence ownership.}
       \resumeItemListEnd
     \resumeSubheading
       {Inmar Intelligence}{Austin, TX}
@@ -120,16 +129,16 @@
         \resumeItem{Monitoring}
           {Wrote reusable custom event extensions in C\# enabling attribute-based logging to Azure Application Insights. Created Kusto log alerts and dashboards to monitor and notify on failures.}
         \resumeItem{Coverage \& Testing}
-          {Improved unit test code coverage by coding generic C\# libraries, test helpers. Cut build time by 25\% by refactoring unit tests using SOLID and wrote generic API clients to simplify integration testing.}
+          {Improved unit test code coverage by coding generic C\# libraries and test helpers. Cut build time by 25\% by refactoring unit tests using SOLID and wrote generic API clients simplifying integration testing.}
       \resumeItemListEnd
     \resumeSubheading
       {Inmar Intelligence}{Winston-Salem, NC}
       {Software Engineering Intern}{May 2017 - May 2018}
       \resumeItemListStart
         \resumeItem{IoT Warehouse Management app}
-          {Developed and implemented a UWP .NET app for Raspberry Pi to  handle \& aggregate notification events from scanning stations using Azure Functions, Azure IoT hub.}
+          {Implemented a UWP .NET app for Raspberry Pi to aggregate events from scanning stations using Azure Functions, Azure IoT hub.}
         \resumeItem{Blob Migration}
-          {Designed and built a custom, scalable, and fault tolerant Azure blob file migration utility to migrate 2M files across storage containers and accounts using Azure Functions. }
+          {Built a scalable and fault tolerant Azure blob file migration utility using Azure function to migrate 2M product scan files across storage containers and accounts. }
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -149,25 +158,17 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{Alexa Skill}
-      {Implemented an Alexa Skill using AWS Lambda in C\# to manage my Trello Grocery Board with ability to add multiple items, set reminders, \& move items across lists. }
     \resumeSubItem{Game Engine}
-      {Created a game engine in Java using an asynchronous multi-threaded architecture, game object model, event management system and a scripting engine. Used the engine to design 2 games - Space Invaders and Pong.}
-    \resumeSubItem{Date Idea Recommender}
-      {A Vue app that recommends date ideas by factoring in previously saved ideas on Trello, restaurants near you using Yelp API, current weather conditions and distance using MapQuest API.}
+      {Created a game engine in Java using an async multi-threaded architecture, game object model, event management system and a scripting engine. Used the engine to design 2 games - Space Invaders and Pong.}
     \resumeSubItem{Continuous Integration Slack Bot}
       {CI Slack Bot written in Node.js that integrates with Travis CI, Coveralls, GitHub to streamline common CI tasks such as code coverage, issue creation, build failures.}
-    \resumeSubItem{Connect 4 game}
-      {Wrote a desktop multiplayer Connect 4 game in Java with TCP socket based communication between two clients.}
-    \resumeSubItem{Bank App}
-      {A web app to emulate the features of an online bank. Built using Ruby on Rails and PostgreSQL with features for depositing, withdrawing, transferring and borrowing money.}
   \resumeSubHeadingListEnd
 
 %
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Languages}{C\#, Java}
+    \resumeSubItem{Languages}{Java, C\#}
     \resumeSubItem{Web}{JavaScript, TypeScript, Vue, Node.js, jQuery, HTML, CSS}   
     \resumeSubItem{Azure}{Functions, Storage, Web Jobs, App Insights, Service Bus}
     \resumeSubItem{AWS}{Lambda, SQS, SNS, CDK, DynamoDB}
